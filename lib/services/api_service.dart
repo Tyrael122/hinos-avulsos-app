@@ -4,7 +4,7 @@ import 'package:hinos_avulsos_app/models/songs.dart';
 import 'package:http/http.dart' as http;
 
 class ApiService {
-  static String baseUrl = dotenv.get('API_BASE_URL', fallback: 'http://localhost:8080/api');
+  static String baseUrl = dotenv.get('API_BASE_URL', fallback: 'http://192.168.1.107:8080/api');
 
   static Future<List<Song>> getSongs() async {
     final response = await http.get(Uri.parse('$baseUrl/songs'));
